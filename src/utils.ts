@@ -128,9 +128,17 @@ export function findEndOfContent(document: vscode.TextDocument, pos: vscode.Posi
         curLinePrefix = getPrefix(getLine(document, curPos));
     } while (curLine < document.lineCount - 1 && inSubsection(curLinePrefix, sectionRegex));
 
+    // `curPos` now points at either:
+    // - the first line *outside* the current section, or
+    // - the last line in the document (which may or may not be inside the section).
+    if (curLine !== document.lineCount - 1) {
+        const endLine = curPos.line - 1;
+        return new vscode.Position(endLine, getLine(document, new vscode.Position(endLine, 0)).length + 1);
+    }
 
-    return (curLine !== document.lineCount - 1) ? new vscode.Position(curPos.line - 1, getLine(document, new vscode.Position(curPos.line - 1, 0)).length + 1) :
-        new vscode.Position(curPos.line, getLine(document, new vscode.Position(curPos.line, 0)).length + 1);
+    const lastLineIsInSection = inSubsection(curLinePrefix, sectionRegex);
+    const endLine = lastLineIsInSection ? curPos.line : curPos.line - 1;
+    return new vscode.Position(endLine, getLine(document, new vscode.Position(endLine, 0)).length + 1);
 
 }
 

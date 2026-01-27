@@ -209,11 +209,14 @@ suite('Commands', () => {
     test('Timestamp', async () => {
         // TODO: Need to find a way to somehow mock Date
         const now = new Date();
-        const datePart = now.toISOString().slice(0, 10);
+        const year = now.getFullYear();
+        const month = now.getMonth() + 1;
+        const day = now.getDate();
+        const datePart = `${year}-${month}-${day}`;
         const dayOfWeek = weekdayArray[now.getDay()];
 
         const initial = '';
-        const expected = `<${datePart} ${dayOfWeek}>`;
+        const expected = `[${datePart} ${dayOfWeek}]`;
 
         await inTextEditor({ language: 'org', content: initial }, async (_, document) => {
             await vscode.commands.executeCommand('org.timestamp');
