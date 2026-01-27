@@ -266,24 +266,26 @@
         "generate-syntax": "node syntaxes/populate-syntax.js"
     },
     "devDependencies": {
-        "@types/mocha": "^2.2.48",
+        "@types/mocha": "^10.0.10",
         "@types/node": "^20.11.30",
         "@types/vscode": "^1.87.0",
         "@typescript-eslint/eslint-plugin": "^7.4.0",
         "@typescript-eslint/parser": "^7.4.0",
         "@vscode/test-cli": "^0.0.12",
-        "@vscode/test-electron": "^2.3.9",
-        "codecov": "^3.1.0",
+        "@vscode/test-electron": "^2.5.2",
         "eslint": "^8.57.0",
-        "mocha": "^6.0.1",
-        "typescript": "^5.4.3",
-        "vscode-coverage-test-runner": "^1.0.0",
-        "vscode-test": "^1.6.1"
+        "mocha": "^11.7.5",
+        "typescript": "^5.4.3"
     },
     "dependencies": {
         "date-fns": "^1.28.3"
     },
     "overrides": {
-        "glob": "^10.5.0"
+        "brace-expansion": "^2.0.2",
+        "cross-spawn": "^7.0.6",
+        "diff": "^8.0.3",
+        "glob": "^10.5.0",
+        "js-yaml": "^4.1.1",
+        "micromatch": "^4.0.8"
     }
 }
