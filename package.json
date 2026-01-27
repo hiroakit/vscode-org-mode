@@ -262,7 +262,7 @@
         "watch": "tsc -watch -p ./",
         "lint": "eslint src --ext .ts",
         "fix": "eslint --fix src --ext .ts",
-        "test": "npm run compile && vscode-test",
+        "test": "npm run compile && node ./scripts/run-vscode-test.js",
         "generate-syntax": "node syntaxes/populate-syntax.js"
     },
     "devDependencies": {
