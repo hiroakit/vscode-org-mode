@@ -280,5 +280,8 @@
     },
     "dependencies": {
         "date-fns": "^1.28.3"
+    },
+    "overrides": {
+        "glob": "^10.5.0"
     }
 }
