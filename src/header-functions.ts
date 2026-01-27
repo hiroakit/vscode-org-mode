@@ -17,7 +17,7 @@ export function insertHeadingRespectContent(textEditor: vscode.TextEditor, edit:
         } else {
             const parentHeader = Utils.findParentPrefix(document, cursorPos) || "*";
             sibling = parentHeader;
-            insertPos = Utils.findEndOfContent(document, cursorPos, Utils.getPrefix(curLine));
+            insertPos = Utils.findEndOfContent(document, cursorPos, sibling);
         }
 
         if(sibling) {
