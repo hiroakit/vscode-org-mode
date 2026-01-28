@@ -9,10 +9,27 @@ Why headers start at H2:
 
 ## Bugfix Overview
 <!--
-In 1-2 lines (~120 chars), describe the fixes included in this PR.
-Overview must describe the bug context and impact. Do not restate the PR title.
-Include why it is a bug, who/what is affected, and the expected behavior.
-Example: Fix date parsing so recurring tasks no longer shift by one day in UTC.
+Required. PRs without a meaningful overview may be sent back for clarification.
+
+In 1-3 short sentences, describe the bug context and impact.
+Do NOT restate the PR title.
+
+Include:
+- Under what conditions the bug occurred
+- What the observed behavior was
+- What the expected behavior should be
+
+Why this is a good example:
+- It explains why the behavior is considered a bug (not just what was changed)
+- It describes the observed vs expected behavior clearly
+- It narrows down the affected conditions, making the issue reproducible and reviewable
+- It provides enough context for reviewers without requiring them to infer intent from the diff
+
+Good example:
+Recurring tasks created near midnight were parsed using local time,
+causing them to shift by one day when evaluated in UTC.
+Tasks should always execute on the originally selected date regardless of timezone.
+Affects tasks scheduled between 23:00-00:00 local time.
 -->
 
 ## Problem
