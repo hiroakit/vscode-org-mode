@@ -11,6 +11,7 @@ Why headers start at H2:
 <!--
 In 1-2 lines (~120 chars), describe the fixes included in this PR.
 Make it immediately clear what changed and what is now correct.
+Example: Fix date parsing so recurring tasks no longer shift by one day in UTC.
 -->
 
 ## Problem
