@@ -9,7 +9,7 @@ Why headers start at H2:
 
 ## Bugfix Overview
 <!--
-Summarize the fix in 1–2 lines.
+In 1-2 lines (~120 chars), describe the fixes included in this PR.
 Make it immediately clear what changed and what is now correct.
 -->
 
