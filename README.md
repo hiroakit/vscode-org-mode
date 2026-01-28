@@ -2,7 +2,7 @@
 [![Version](https://vsmarketplacebadges.dev/version/vscode-org-mode.org-mode.svg)](https://marketplace.visualstudio.com/items?itemName=vscode-org-mode.org-mode)
 [![Installs](https://vsmarketplacebadges.dev/installs/vscode-org-mode.org-mode.svg)](https://marketplace.visualstudio.com/items?itemName=vscode-org-mode.org-mode)
 [![Ratings](https://vsmarketplacebadges.dev/rating/vscode-org-mode.org-mode.svg)](https://marketplace.visualstudio.com/items?itemName=vscode-org-mode.org-mode)
-[![Travis](https://img.shields.io/travis/com/vscode-org-mode/vscode-org-mode)](https://travis-ci.com/vscode-org-mode/vscode-org-mode)
+[![CI](https://github.com/hiroakit/vscode-org-mode/actions/workflows/ci.yml/badge.svg)](https://github.com/hiroakit/vscode-org-mode/actions/workflows/ci.yml)
 [![codecov](https://img.shields.io/codecov/c/github/vscode-org-mode/vscode-org-mode?branch=master)](https://codecov.io/gh/vscode-org-mode/vscode-org-mode)
 [![License](https://img.shields.io/github/license/vscode-org-mode/vscode-org-mode)](./LICENSE.txt)
 
