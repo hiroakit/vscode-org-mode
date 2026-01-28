@@ -37,9 +37,6 @@ jobs:
       - name: Install dependencies
         run: npm ci
 
-      - name: Build extension
-        run: npm run vscode:prepublish
-
       - name: Run tests with coverage
         run: npm run test:coverage
 
@@ -48,3 +45,6 @@ jobs:
         env:
           CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         run: npm run publish-coverage
+
+      - name: Build extension
+        run: npm run vscode:prepublish
