@@ -26,13 +26,14 @@ function run(cmd, args) {
 }
 
 const vscodeTestBin = process.platform === 'win32' ? 'vscode-test.cmd' : 'vscode-test';
+const cliArgs = process.argv.slice(2);
 
 const shouldUseXvfb =
   process.platform === 'linux' && hasCommand('xvfb-run') && !canConnectToDisplay();
 
 if (shouldUseXvfb) {
-  run('xvfb-run', ['-a', vscodeTestBin]);
+  run('xvfb-run', ['-a', vscodeTestBin, ...cliArgs]);
 } else {
-  run(vscodeTestBin, []);
+  run(vscodeTestBin, cliArgs);
 }
 
