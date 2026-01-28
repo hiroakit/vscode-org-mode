@@ -131,6 +131,10 @@ Use TSLint with default settings.
 - `develop` is the main branch into which new features are merged. It is protected from direct pushes, so all changes come from pull requests.
 - Features: For all new additions, create a new feature branch. When complete, create a pull request into `develop` for that branch. Optionally, prefix feature branch names with `feature/`.
 
+### Pull request size
+
+Pull requests should stay at or below 400 changed lines (additions + deletions). If a change exceeds that size, split it into smaller, reviewable PRs. Rationale: https://smartbear.com/resources/case-studies/cisco-systems-collaborator/
+
 ## Gratitude
 
 The original Org mode was written for Emacs by Carsten Dominik, with the help and support of [an impressive list of geniuses](http://orgmode.org/org.html#History-and-Acknowledgments). Our work is inspired by though not associated with their original masterpiece. In addition, many aspects of the extension were inspired by [the Spacemacs Org layer](https://github.com/syl20bnr/spacemacs/tree/master/layers/%2Bemacs/org).
