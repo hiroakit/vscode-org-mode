@@ -264,7 +264,7 @@
         "fix": "eslint --fix src --ext .ts",
         "test": "npm run compile && node ./scripts/run-vscode-test.js",
         "test:coverage": "npm run compile && node ./scripts/run-vscode-test.js --coverage",
-        "publish-coverage": "codecov -f coverage/lcov.info",
+        "publish-coverage": "node ./scripts/upload-codecov.js",
         "generate-syntax": "node syntaxes/populate-syntax.js"
     },
     "devDependencies": {
@@ -275,23 +275,15 @@
         "@typescript-eslint/parser": "^7.4.0",
         "@vscode/test-cli": "^0.0.12",
         "@vscode/test-electron": "^2.3.9",
-        "codecov": "^3.1.0",
         "eslint": "^8.57.0",
         "mocha": "^11.7.5",
-        "typescript": "^5.4.3",
-        "vscode-test": "^1.6.1"
+        "typescript": "^5.4.3"
     },
     "dependencies": {
         "date-fns": "^1.28.3"
     },
     "overrides": {
         "glob": "^10.5.0",
-        "js-yaml": "4.1.1",
-        "codecov": {
-            "js-yaml": "3.14.2"
-        },
-        "istanbul": {
-            "js-yaml": "3.14.2"
-        }
+        "js-yaml": "4.1.1"
     }
 }
