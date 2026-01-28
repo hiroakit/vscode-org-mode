@@ -277,7 +277,6 @@
         "eslint": "^8.57.0",
         "mocha": "^11.7.5",
         "typescript": "^5.4.3",
-        "vscode-coverage-test-runner": "^1.0.0",
         "vscode-test": "^1.6.1"
     },
     "dependencies": {
