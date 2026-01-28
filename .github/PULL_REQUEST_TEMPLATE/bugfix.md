@@ -10,7 +10,8 @@ Why headers start at H2:
 ## Bugfix Overview
 <!--
 In 1-2 lines (~120 chars), describe the fixes included in this PR.
-Make it immediately clear what changed and what is now correct.
+Overview must describe the bug context and impact. Do not restate the PR title.
+Include why it is a bug, who/what is affected, and the expected behavior.
 Example: Fix date parsing so recurring tasks no longer shift by one day in UTC.
 -->
 
