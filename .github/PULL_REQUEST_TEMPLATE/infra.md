@@ -25,10 +25,12 @@ the minimum context to assess safety, risk, and test coverage.
 
 ### Breaking change
 <!--
+If unsure, choose Yes.
 Yes if existing users or workflows must change, e.g.:
   - new required secrets/env/tools
   - minimum version bumps
   - renamed/removed workflows or required config changes
+No only if existing users/workflows require zero changes.
 -->
 - [ ] Yes
 - [ ] No
