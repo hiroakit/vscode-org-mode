@@ -8,3 +8,4 @@ coverage/
 *.orig
 
 *.old
+*.vsix
