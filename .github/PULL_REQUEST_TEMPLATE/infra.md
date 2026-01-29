@@ -39,6 +39,7 @@ Include:
 
 ## Changes
 <!-- Mark the relevant areas to guide reviewers and routing. -->
+<!-- Multiple selections are allowed. -->
 - [ ] CI / Workflow
 - [ ] Build / Release
 - [ ] Coverage / Quality tools
