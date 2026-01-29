@@ -23,8 +23,13 @@ the minimum context to assess safety, risk, and test coverage.
 ### Impacted Areas
 <!-- List files, workflows, or systems affected (scope/blast radius). -->
 
-### Compatibility / Breaking change
-<!-- Call out user-facing or workflow-breaking changes and mitigations. -->
+### Breaking change
+<!--
+Yes if existing users or workflows must change, e.g.:
+  - new required secrets/env/tools
+  - minimum version bumps
+  - renamed/removed workflows or required config changes
+-->
 - [ ] Yes
 - [ ] No
 
