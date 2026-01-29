@@ -5,7 +5,7 @@
 - All changes must be submitted via pull requests.
 - PRs that exceed the max changed-lines limit enforced by CI are rejected. The limit is defined in `.github/workflows/pr-size-limit.yml`.
 - Large changes must be split into focused, reviewable PRs.
-- Bugfix branches must use the `bugfix/` prefix (e.g. `bugfix/short-description`).
+- Branch names must follow the Git Workflow section below.
 
 ## Review Process
 
@@ -43,6 +43,7 @@ Use ESLint with the repository configuration.
 - All changes come through pull requests; direct pushes are not expected.
 - For new additions, create a feature branch and open a pull request into `develop`.
 - Optionally, prefix feature branch names with `feature/`.
+- Bugfix branches must use the `bugfix/` prefix (e.g. `bugfix/short-description`).
 
 ## Pull Request Size
 
