@@ -1,3 +1,8 @@
+---
+description: "Directs agents to AGENTS.md for contribution and PR rules"
+alwaysApply: false
+---
+
 # Contribution guidelines (AI notice)
 
 Primary AI guidance lives in AGENTS.md. Read it first.
