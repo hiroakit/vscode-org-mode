@@ -88,6 +88,7 @@ How you confirmed the fix is correct
 - [ ] Manual verification
 - [ ] Automated test added or updated
 - [ ] Existing tests pass
+- [ ] Screenshots or logs attached (if applicable)
 - Test notes (commands, environment, datasets):
 
 ## Impact / Risk
