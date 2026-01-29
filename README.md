@@ -107,7 +107,7 @@ Detailed documentation is kept in the [GitHub Wiki](https://github.com/vscode-or
 
 ## Contributing
 
-We welcome issues, feature requests, and pull requests.
+We welcome pull requests.
 
 Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before submitting a pull request.
 It explains our PR guidelines, review process, and required templates.
