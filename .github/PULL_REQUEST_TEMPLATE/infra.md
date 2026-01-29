@@ -1,8 +1,19 @@
 ## Infra PR Template
+<!--
+Why this structure:
+  - Purpose/Background explains intent and timing.
+  - Changes + Impacted Areas show scope and owners to involve.
+  - Compatibility highlights risk and rollout needs.
+  - Verification documents how correctness was checked.
+This reduces review back-and-forth for authors and gives reviewers
+the minimum context to assess safety, risk, and test coverage.
+-->
 
 ### Purpose / Background
+<!-- Why is this needed now? Link to incidents, upgrades, or goals. -->
 
 ### Changes
+<!-- Mark the relevant areas to guide reviewers and routing. -->
 - [ ] CI / Workflow
 - [ ] Build / Release
 - [ ] Coverage / Quality tools
@@ -10,13 +21,17 @@
 - [ ] Other:
 
 ### Impacted Areas
+<!-- List files, workflows, or systems affected (scope/blast radius). -->
 
 ### Compatibility / Breaking change
+<!-- Call out user-facing or workflow-breaking changes and mitigations. -->
 - [ ] Yes
 - [ ] No
 
 ### Verification
+<!-- How was this validated? Helps reviewers reproduce or trust checks. -->
 - [ ] CI passes
 - [ ] Manual checks (if needed):
 
 ### Related Issue / PR
+<!-- Connects decisions to prior context for future maintainers. -->
