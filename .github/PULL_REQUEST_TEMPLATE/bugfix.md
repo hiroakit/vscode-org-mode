@@ -19,6 +19,14 @@ Why headers start at H2:
   Source: https://docs.github.com/en/enterprise-server@3.15/contributing/style-guide-and-content-model/style-guide?utm_source=chatgpt.com#headers
 -->
 
+<!--
+PR size policy:
+The max changed-lines limit is enforced by CI and defined in
+.github/workflows/pr-size-limit.yml (maxChangedLines).
+If a bugfix requires more changes, split it into focused PRs
+and link them in the Related Issues / PRs section before requesting review.
+-->
+
 ## Bugfix Overview
 <!--
 Required. PRs without a meaningful overview may be sent back for clarification.
