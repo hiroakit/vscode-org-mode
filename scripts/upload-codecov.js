@@ -1,5 +1,9 @@
 const { createWriteStream, chmodSync, unlinkSync } = require('fs'), https = require('https'), os = require('os'), path = require('path'), { spawnSync } = require('child_process');
 const platform = { linux: 'linux', darwin: 'macos', win32: 'windows' }[process.platform];
+if (!process.env.CODECOV_TOKEN) {
+    console.log('CODECOV_TOKEN is not set; skipping Codecov upload.');
+    process.exit(0);
+}
 if (!platform) { console.error(`Unsupported platform: ${process.platform}`); process.exit(1); }
 const isWin = process.platform === 'win32';
 const bin = isWin ? 'codecov.exe' : 'codecov';

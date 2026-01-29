@@ -19,6 +19,11 @@
 - CI must pass before merge.
 - Reviewers may request changes or clarification.
 
+## Coverage reporting
+
+We use Codecov (https://app.codecov.io/github/hiroakit/vscode-org-mode) to report code coverage in pull requests.
+Coverage reports are informational only and do not block CI.
+
 ## Naming
 
 The full name of this project is `VS Code Org Mode`. It is abbreviated `vscode-org-mode`. In the VS Code Marketplace, it is listed as `Org Mode`.
