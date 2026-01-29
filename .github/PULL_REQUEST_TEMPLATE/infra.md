@@ -44,7 +44,9 @@ Include:
 - [ ] Coverage / Quality tools
 - [ ] Docs / Template / Repo settings
 - [ ] Other:
-- Notes / links:
+
+<!-- Optional: add brief context or links for the checked items -->
+Notes / links:
 
 ## Impacted Areas
 <!--
