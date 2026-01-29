@@ -77,11 +77,13 @@ No only if existing users/workflows require zero changes.
 - Mitigation / rollout notes (if Yes):
 
 ## Verification
-<!-- How this was validated. Helps reviewers reproduce or trust checks. -->
+<!-- What evidence shows this change is safe and correct -->
 - [ ] CI passes
-- [ ] Manual checks (if needed):
-- [ ] Dry run or staging validation (if applicable)
-- Notes (commands, environments):
+- [ ] Manual checks
+- [ ] Dry run or staging validation
+
+### Verification Notes
+<!-- Commands, environments, URLs, logs -->
 
 ## Related Issues / PRs
 <!-- Connects decisions to prior context for future maintainers. -->
