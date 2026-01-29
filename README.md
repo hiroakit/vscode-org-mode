@@ -111,6 +111,7 @@ We welcome pull requests.
 
 Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before submitting a pull request.
 It explains our PR guidelines, review process, and required templates.
+Details are centralized in CONTRIBUTING.md.
 
 ## Gratitude
 
