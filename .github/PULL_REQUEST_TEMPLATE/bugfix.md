@@ -14,28 +14,27 @@ Required. PRs without a meaningful overview may be sent back for clarification.
 In 1-3 short sentences, describe the bug context and impact.
 Do NOT restate the PR title.
 
-Include:
-- Under what conditions the bug occurred
-- What the observed behavior was
-- What the expected behavior should be
-
-Why this is a good example:
-- It explains why the behavior is considered a bug (not just what was changed)
-- It describes the observed vs expected behavior clearly
-- It narrows down the affected conditions, making the issue reproducible and reviewable
-- It provides enough context for reviewers without requiring them to infer intent from the diff
-
 Good example:
 Recurring tasks created near midnight were parsed using local time,
 causing them to shift by one day when evaluated in UTC.
 Tasks should always execute on the originally selected date regardless of timezone.
 Affects tasks scheduled between 23:00-00:00 local time.
+
+Why this is a good example:
+- It explains why the behavior is considered a bug (not just what was changed)
+- It clearly describes observed vs expected behavior
+- It narrows down affected conditions, making the issue reproducible and reviewable
+- It provides enough context for reviewers without requiring them to infer intent from the diff
 -->
 
 ## Problem
 <!--
-- What was broken
-- What the user experienced
+Describe the problem in more detail from a user or system perspective.
+This section expands on the Overview.
+
+Include:
+- What was broken in practice
+- What the user or system actually experienced
 -->
 - Observed behavior:
 - Expected behavior:
