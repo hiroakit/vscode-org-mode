@@ -23,7 +23,7 @@ Why headers start at H2:
 <!--
 Required. PRs without a meaningful overview may be sent back for clarification.
 
-In 1-3 short sentences (~100-200 characters), describe the bug context and impact.
+In 1-3 short sentences (~200-400 characters), describe the bug context and impact.
 Do NOT restate the PR title.
 
 Good example:
