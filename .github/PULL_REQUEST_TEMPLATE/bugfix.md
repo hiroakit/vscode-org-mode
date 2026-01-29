@@ -50,16 +50,21 @@ If reproduction is difficult or environment-specific, explain why.
 
 ## Root Cause
 <!--
-- The underlying cause of the bug
-- Why it was not detected earlier
+Explain the underlying cause of the bug.
+Focus on design, assumptions, or missing constraints.
+
+Also explain why this issue was not detected earlier.
 -->
 - Cause:
 - Why it was missed:
 
 ## Fix
 <!--
-- How the issue was fixed
-- Why this fix is sufficient
+Describe how the issue was fixed and why this approach is sufficient.
+
+Mention:
+- Why this fix addresses the root cause
+- Why alternative approaches were not chosen (if applicable)
 -->
 - Fix approach:
 - Alternatives considered (if any):
