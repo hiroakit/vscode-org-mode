@@ -21,7 +21,7 @@ to reduce review back-and-forth and improve review quality.
 - Bugfix PRs must use the bugfix template.
 - Templates explain why information is required, not just what to write.
 
-See `.github/PULL_REQUEST_TEMPLATE/` for details.
+See https://github.com/hiroakit/vscode-org-mode/tree/develop/.github/PULL_REQUEST_TEMPLATE/ for details.
 
 ## Naming
 
