@@ -1,4 +1,16 @@
 <!--
+This template is structured to match the reviewer’s mental model
+and reduce review back-and-forth.
+
+Reviewer context (bugfix review order):
+1. Overview – what is broken and what is affected
+2. Problem – what actually happened
+3. Reproduction – can it be reproduced
+4. Root Cause – why it happened
+5. Fix – whether the fix addresses the cause
+-->
+
+<!--
 Why headers start at H2:
 - The PR title is treated as the H1 for the page, so template sections begin at H2.
 - GitHub style guide (Headers) states:
