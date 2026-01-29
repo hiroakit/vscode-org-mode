@@ -107,33 +107,11 @@ Detailed documentation is kept in the [GitHub Wiki](https://github.com/vscode-or
 
 ## Contributing
 
-We welcome contributions to the GitHub repo. Here are basic guidelines for conventions.
+We welcome pull requests.
 
-Join the community [here](https://gitter.im/vscode-org-mode/Lobby).
-
-### Naming
-
-The full name of this project is `VS Code Org Mode`. It is abbreviated `vscode-org-mode`. In the VS Code Marketplace, it is listed as `Org Mode`.
-
-Commands are prefixed with `org.` and followed by camel case, eg `org.insertHeadingRespectContent`. Command titles are prefixed with `Org: ` and followed by capitalized words separated by spaces, eg `Org: Insert Heading Respect Content`.
-
-Filenames use kebab case, eg `header-functions.ts`.
-
-When referring to the original Org mode, we capitalize the "O" and leave the "m" lower case. This is in keeping with the original team's usage on [orgmode.org](http://orgmode.org/).
-
-### Code
-
-Use TSLint with default settings.
-
-### Git
-
-- `master` is used for production deploys.
-- `develop` is the main branch into which new features are merged. It is protected from direct pushes, so all changes come from pull requests.
-- Features: For all new additions, create a new feature branch. When complete, create a pull request into `develop` for that branch. Optionally, prefix feature branch names with `feature/`.
-
-### Pull request size
-
-Pull requests should stay at or below 400 changed lines (additions + deletions). If a change exceeds that size, split it into smaller, reviewable PRs. Rationale: https://smartbear.com/resources/case-studies/cisco-systems-collaborator/
+Please read [CONTRIBUTING.md](./CONTRIBUTING.md) before submitting a pull request.
+It explains our PR guidelines, review process, and required templates.
+Details are centralized in CONTRIBUTING.md.
 
 ## Gratitude
 
