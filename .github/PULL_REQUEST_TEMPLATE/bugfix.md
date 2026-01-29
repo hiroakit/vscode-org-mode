@@ -1,13 +1,13 @@
 <!--
-This template is structured to match the reviewer’s mental model
+This template is structured to match the reviewer's mental model
 and reduce review back-and-forth.
 
 Reviewer context (bugfix review order):
-1. Overview – what is broken and what is affected
-2. Problem – what actually happened
-3. Reproduction – can it be reproduced
-4. Root Cause – why it happened
-5. Fix – whether the fix addresses the cause
+1. Overview - what is broken and what is affected
+2. Problem - what actually happened
+3. Reproduction - can it be reproduced
+4. Root Cause - why it happened
+5. Fix - whether the fix addresses the cause
 -->
 
 <!--
@@ -25,6 +25,11 @@ Required. PRs without a meaningful overview may be sent back for clarification.
 
 In 1-3 short sentences (~200-400 characters), describe the bug context and impact.
 Do NOT restate the PR title.
+
+Include:
+- Under what conditions the bug occurred
+- What the observed behavior was
+- What the expected behavior should be
 
 Good example:
 Recurring tasks created near midnight were parsed using local time,
