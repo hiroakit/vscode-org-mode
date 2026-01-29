@@ -88,7 +88,7 @@ No only if existing users/workflows require zero changes.
 <!-- Commands, environments, URLs, logs -->
 
 ## Related Issues / PRs
-<!-- Connects decisions to prior context for future maintainers. -->
+<!-- Connects decisions to prior context for future maintainers. Write "None" if not applicable. -->
 - Issue:
   - #
 - Related PRs:
