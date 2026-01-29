@@ -47,7 +47,16 @@ Include:
 - Notes / links:
 
 ## Impacted Areas
-<!-- List files, workflows, services, or repos affected (scope/blast radius). -->
+<!--
+This section clarifies scope (where changes ripple).
+Infra changes often affect more than the diff suggests, so this helps reviewers
+decide who should be involved and what to scrutinize.
+
+Examples:
+- Files / workflows: changed files or CI workflows
+- Systems / services: Codecov, GitHub Actions, external SaaS
+- Teams / owners: relevant teams or maintainers (if any)
+-->
 - Files / workflows:
 - Systems / services:
 - Teams / owners (if applicable):
