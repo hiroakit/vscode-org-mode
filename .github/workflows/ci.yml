@@ -45,11 +45,12 @@ jobs:
       - name: Run tests with coverage
         run: npm run test:coverage
 
-      - name: Publish coverage
-        if: matrix.os == 'ubuntu-latest'
-        env:
-          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
-        run: npm run publish-coverage
+      - name: Upload coverage reports to Codecov
+        if: ${{ matrix.os == 'ubuntu-latest' && secrets.CODECOV_TOKEN != '' }}
+        uses: codecov/codecov-action@v5
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          files: coverage/lcov.info
 
       - name: Build extension
         run: npm run vscode:prepublish
