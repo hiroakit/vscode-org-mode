@@ -3,25 +3,20 @@
 ## Pull Request Guidelines
 
 - All changes must be submitted via pull requests.
-- PRs that exceed the max changed-lines limit enforced by CI are rejected. The limit is defined in [.github/workflows/pr-size-limit.yml](https://github.com/hiroakit/vscode-org-mode/blob/develop/.github/workflows/pr-size-limit.yml).
-- Large changes must be split into focused, reviewable PRs.
 - Branch names must follow the Git Workflow section below.
+- Use the appropriate PR template from [PULL_REQUEST_TEMPLATE](https://github.com/hiroakit/vscode-org-mode/tree/develop/.github/PULL_REQUEST_TEMPLATE/).
+  - Bugfix PRs must use the bugfix template.
+  - Infra PRs must use the infra template.
+  - Templates explain why information is required, not just what to write.
+- Keep PRs within the max changed-lines limit enforced by CI and defined in [.github/workflows/pr-size-limit.yml](https://github.com/hiroakit/vscode-org-mode/blob/develop/.github/workflows/pr-size-limit.yml).
+  If a change exceeds that size, split it into smaller, reviewable PRs.
+  Rationale: https://smartbear.com/resources/case-studies/cisco-systems-collaborator/
 
 ## Review Process
 
 - PRs are reviewed by maintainers.
 - CI must pass before merge.
 - Reviewers may request changes or clarification.
-
-## Pull Request Templates
-
-This repository uses purpose-specific PR templates
-to reduce review back-and-forth and improve review quality.
-
-- Bugfix PRs must use the bugfix template.
-- Templates explain why information is required, not just what to write.
-
-See [PULL_REQUEST_TEMPLATE](https://github.com/hiroakit/vscode-org-mode/tree/develop/.github/PULL_REQUEST_TEMPLATE/) for details.
 
 ## Naming
 
@@ -44,9 +39,4 @@ Use ESLint with the repository configuration.
 - For new additions, create a feature branch and open a pull request into `develop`.
 - Optionally, prefix feature branch names with `feature/`.
 - Bugfix branches must use the `bugfix/` prefix (e.g. `bugfix/short-description`).
-
-## Pull Request Size
-
-The max changed-lines limit is enforced by CI and defined in [.github/workflows/pr-size-limit.yml](https://github.com/hiroakit/vscode-org-mode/blob/develop/.github/workflows/pr-size-limit.yml).
-If a change exceeds that size, split it into smaller, reviewable PRs.
-Rationale: https://smartbear.com/resources/case-studies/cisco-systems-collaborator/
+- Infra branches must use the `infra/` prefix (e.g. `infra/short-description`).
