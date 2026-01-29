@@ -76,6 +76,7 @@ No only if existing users/workflows require zero changes.
 - [ ] Yes
 - [ ] No
 - Mitigation / rollout notes (if Yes):
+  <!-- e.g. staged rollout, backwards compatibility, migration steps, rollback plan -->
 
 ## Verification
 <!-- What evidence shows this change is safe and correct -->
