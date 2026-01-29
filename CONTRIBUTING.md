@@ -8,6 +8,7 @@
   - Bugfix PRs must use the bugfix template.
   - Infra PRs must use the infra template.
   - Templates explain why information is required, not just what to write.
+- Write PR titles and descriptions in US English.
 - Keep PRs within the max changed-lines limit enforced by CI and defined in [.github/workflows/pr-size-limit.yml](https://github.com/hiroakit/vscode-org-mode/blob/develop/.github/workflows/pr-size-limit.yml).
   If a change exceeds that size, split it into smaller, reviewable PRs.
   Rationale: https://smartbear.com/resources/case-studies/cisco-systems-collaborator/
