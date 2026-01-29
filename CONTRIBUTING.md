@@ -39,3 +39,4 @@ Use ESLint with the repository configuration.
 - For new additions, create a feature branch and open a pull request into `develop`.
 - Optionally, prefix feature branch names with `feature/`.
 - Bugfix branches must use the `bugfix/` prefix (e.g. `bugfix/short-description`).
+- Infra branches must use the `infra/` prefix (e.g. `infra/short-description`).
