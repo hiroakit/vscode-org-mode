@@ -115,6 +115,12 @@ Scope and risk assessment
 
 ## Related Issues / PRs
 <!--
-Issue numbers or related PRs
+List related issues or PRs for context.
+
+Required if this bugfix is split across multiple PRs.
+For a single-PR fix, link the issue if applicable.
 -->
-- Fixes #
+- Issue:
+  - #
+- Related PRs:
+  - #
