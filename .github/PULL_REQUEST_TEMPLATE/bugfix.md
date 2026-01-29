@@ -42,7 +42,7 @@ Include:
 ## Reproduction Steps
 <!--
 Minimum steps for reviewers to reproduce the issue.
-If reproduction is difficult, explain why.
+If reproduction is difficult or environment-specific, explain why.
 -->
 1.
 2.
