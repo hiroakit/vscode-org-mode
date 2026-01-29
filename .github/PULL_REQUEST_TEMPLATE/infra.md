@@ -1,22 +1,22 @@
-## Infra PR テンプレート
+## Infra PR Template
 
-### 目的 / 背景
+### Purpose / Background
 
-### 変更内容
+### Changes
 - [ ] CI / Workflow
 - [ ] Build / Release
 - [ ] Coverage / Quality tools
 - [ ] Docs / Template / Repo settings
-- [ ] その他:
+- [ ] Other:
 
-### 影響範囲
+### Impacted Areas
 
-### 互換性 / Breaking change
-- [ ] あり
-- [ ] なし
+### Compatibility / Breaking change
+- [ ] Yes
+- [ ] No
 
-### 検証
-- [ ] CI が通ることを確認
-- [ ] 手動確認（必要な場合）:
+### Verification
+- [ ] CI passes
+- [ ] Manual checks (if needed):
 
-### 関連 Issue / PR
+### Related Issue / PR
