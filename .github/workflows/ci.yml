@@ -46,10 +46,12 @@ jobs:
         run: npm run test:coverage
 
       - name: Upload coverage reports to Codecov
-        if: ${{ matrix.os == 'ubuntu-latest' && secrets.CODECOV_TOKEN != '' }}
+        if: ${{ matrix.os == 'ubuntu-latest' && env.CODECOV_TOKEN != '' }}
         uses: codecov/codecov-action@v5
+        env:
+          CODECOV_TOKEN: ${{ secrets.CODECOV_TOKEN }}
         with:
-          token: ${{ secrets.CODECOV_TOKEN }}
+          token: ${{ env.CODECOV_TOKEN }}
           files: coverage/lcov.info
 
       - name: Build extension
