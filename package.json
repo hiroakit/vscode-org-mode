@@ -281,9 +281,6 @@
         "mocha": "^11.7.5",
         "typescript": "^5.4.3"
     },
-    "dependencies": {
-        "date-fns": "^1.28.3"
-    },
     "overrides": {
         "brace-expansion@^1.0.0": "1.1.12",
         "brace-expansion@^2.0.0": "2.0.2",
