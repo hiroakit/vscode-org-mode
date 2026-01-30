@@ -38,6 +38,10 @@ When referring to the original Org mode, we capitalize the "O" and leave the "m"
 
 Use ESLint with the repository configuration.
 
+## Building the extension
+
+To create a VSIX package or build the extension locally, see [BUILD.md](BUILD.md).
+
 ## Git Workflow
 
 - `develop` is the default branch for new changes.
