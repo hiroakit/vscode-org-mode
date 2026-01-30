@@ -1,5 +1,5 @@
 #+TITLE: Visual Studio Code Org Mode Development
-#+NOTE: This document describes the original project proposal and early development plan.
+#+NOTE: This document describes the initial MVP proposal and early development plan.
 #+NOTE: It is kept for historical reference and does not reflect the current state of the extension.
 * About
 VS Code Org Mode (~vscode-org-mode~) is an extension for Visual Studio Code that allows users to read and write ~.org~ files.
