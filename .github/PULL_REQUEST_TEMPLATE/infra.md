@@ -86,6 +86,15 @@ No only if existing users/workflows require zero changes.
 
 ### Verification Notes
 <!-- Commands, environments, URLs, logs -->
+If the change is expected to impact product or test code, include results for:
+- ✅ npm ci
+- ✅ npm test
+- ✅ npx @vscode/vsce package
+
+Symbol meanings:
+- ✅ = success
+- ⚠️ = warning
+- ❌ = failed
 
 ## Related Issues / PRs
 <!-- Connects decisions to prior context for future maintainers. Write "None" if not applicable. -->
