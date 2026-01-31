@@ -15,12 +15,12 @@ import * as simpleDatetime from '../src/simple-datetime';
 
 async function withLeftZero(enabled: boolean, action: () => Promise<void>) {
     const config = vscode.workspace.getConfiguration("org");
-    const previous = config.inspect<boolean>("addLeftZero")?.workspaceValue;
-    await config.update("addLeftZero", enabled, vscode.ConfigurationTarget.Workspace);
+    const previous = config.inspect<boolean>("addLeftZero")?.globalValue;
+    await config.update("addLeftZero", enabled, vscode.ConfigurationTarget.Global);
     try {
         await action();
     } finally {
-        await config.update("addLeftZero", previous, vscode.ConfigurationTarget.Workspace);
+        await config.update("addLeftZero", previous, vscode.ConfigurationTarget.Global);
     }
 }
 
