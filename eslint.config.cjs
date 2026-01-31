@@ -25,7 +25,8 @@ module.exports = [
             "@typescript-eslint"
         ],
         rules: {
-            semi: ["error", "always"]
+            semi: ["error", "always"],
+            "max-lines": ["error", { max: 500, skipComments: true }]
         }
     })
 ];
