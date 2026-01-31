@@ -30,7 +30,7 @@ export function getHeaderPrefix(line: string) {
  * @return the title name
  */
 export function getHeaderTitle(line: string): string {
-    return line.substr(line.indexOf(' ') + 1);
+    return line.substring(line.indexOf(' ') + 1);
 }
 
 export function getPrefix(line: string) {
