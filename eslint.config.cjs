@@ -27,7 +27,15 @@ module.exports = [
         rules: {
             semi: ["error", "always"],
             "max-lines": ["error", { max: 500, skipComments: true }],
-            complexity: ["error", { max: 12 }]
+            complexity: ["error", { max: 12 }],
+            "@typescript-eslint/no-unused-vars": [
+                "error",
+                {
+                    argsIgnorePattern: "^_",
+                    varsIgnorePattern: "^_",
+                    caughtErrorsIgnorePattern: "^_"
+                }
+            ]
         }
     })
 ];
