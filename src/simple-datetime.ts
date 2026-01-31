@@ -1,4 +1,3 @@
-import * as datefns from 'date-fns';
 import * as Utils from './utils';
 
 const weekdayArray = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
@@ -118,9 +117,8 @@ export function currentDateTime(): ISimpleDateTime {
 
 export function modifyDate(dateString: string, action: string): string {
     const oldDate = parseDate(dateString);
-    const initialDateObject = datefns.parse(`${oldDate.year}-${oldDate.month}-${oldDate.day}`);
-
-    const dateObject = (action === "UP") ? datefns.addDays(initialDateObject, 1): datefns.addDays(initialDateObject, -1);
+    const initialDateObject = new Date(oldDate.year, oldDate.month - 1, oldDate.day);
+    const dateObject = addDays(initialDateObject, action === "UP" ? 1 : -1);
 
     const newDate = dateToSimpleDate(dateObject);
     if (!oldDate.weekday) {
@@ -128,6 +126,12 @@ export function modifyDate(dateString: string, action: string): string {
     }
 
     return buildDateString(newDate);
+}
+
+function addDays(date: Date, days: number): Date {
+    const nextDate = new Date(date.getTime());
+    nextDate.setDate(nextDate.getDate() + days);
+    return nextDate;
 }
 
 export function getClockTotal(line) {
