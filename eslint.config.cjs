@@ -21,19 +21,42 @@ module.exports = [
             ecmaVersion: "latest",
             sourceType: "module"
         },
+        settings: {
+            "import/resolver": {
+                typescript: {
+                    project: "./tsconfig.json"
+                }
+            }
+        },
         plugins: [
-            "@typescript-eslint"
+            "@typescript-eslint",
+            "import",
+            "unused-imports"
         ],
         rules: {
             semi: ["error", "always"],
             "max-lines": ["error", { max: 500, skipComments: true }],
             complexity: ["error", { max: 12 }],
-            "@typescript-eslint/no-unused-vars": [
+            "@typescript-eslint/no-unused-vars": "off",
+            "unused-imports/no-unused-imports": "error",
+            "unused-imports/no-unused-vars": [
                 "error",
                 {
+                    args: "after-used",
                     argsIgnorePattern: "^_",
-                    varsIgnorePattern: "^_",
-                    caughtErrorsIgnorePattern: "^_"
+                    caughtErrors: "all",
+                    caughtErrorsIgnorePattern: "^_",
+                    ignoreRestSiblings: true,
+                    vars: "all",
+                    varsIgnorePattern: "^_"
+                }
+            ],
+            "import/no-unused-modules": [
+                "error",
+                {
+                    unusedExports: true,
+                    src: ["src/**/*.ts", "test/**/*.ts"],
+                    ignoreExports: ["src/extension.ts"]
                 }
             ]
         }
