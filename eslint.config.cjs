@@ -26,7 +26,8 @@ module.exports = [
         ],
         rules: {
             semi: ["error", "always"],
-            "max-lines": ["error", { max: 500, skipComments: true }]
+            "max-lines": ["error", { max: 500, skipComments: true }],
+            complexity: ["error", { max: 12 }]
         }
     })
 ];
