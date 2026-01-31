@@ -18,8 +18,7 @@ interface IContextData {
     range: Range
 }
 
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-export default function getCursorContext(textEditor: TextEditor, edit: TextEditorEdit): IContextData {
+export default function getCursorContext(_textEditor: TextEditor, _edit: TextEditorEdit): IContextData {
     const document = Util.getActiveTextEditorEdit();
     const cursorPos = Util.getCursorPosition();
     const curLine = Util.getLine(document, cursorPos);

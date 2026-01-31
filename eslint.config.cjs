@@ -22,9 +22,15 @@ module.exports = [
             sourceType: "module"
         },
         settings: {
+            "import/parsers": {
+                "@typescript-eslint/parser": [".ts"]
+            },
             "import/resolver": {
                 typescript: {
                     project: "./tsconfig.json"
+                },
+                node: {
+                    extensions: [".js", ".jsx", ".ts", ".tsx"]
                 }
             }
         },

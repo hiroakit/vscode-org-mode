@@ -1,7 +1,6 @@
 import * as vscode from 'vscode';
 
- // eslint-disable-next-line @typescript-eslint/no-unused-vars
-export function butterfly(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit) {
+export function butterfly(_textEditor: vscode.TextEditor, _edit: vscode.TextEditorEdit) {
     const query = "Do you really want to unleash the powers of the butterfly?";
     const options = ["Yes", "No"];
     const fact = "Amazing physics going on...";

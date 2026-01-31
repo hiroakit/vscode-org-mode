@@ -3,8 +3,8 @@ import getCursorContext, { DATE, TODO } from './cursor-context';
 import * as Datetime from './simple-datetime';
 import nextTodo from './todo-switch';
 
-export const UP = "UP";
-export const DOWN = "DOWN";
+const UP = "UP";
+const DOWN = "DOWN";
 
 // If any new contexts are created (Such as TODO), switch for the dataLabel here
 function modifyContext(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdit, action: string) {
