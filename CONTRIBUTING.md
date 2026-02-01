@@ -16,6 +16,12 @@
   If a change exceeds that size, split it into smaller, reviewable PRs.
   Rationale: https://smartbear.com/resources/case-studies/cisco-systems-collaborator/
 
+## Issue triage and labels
+
+We maintain a label taxonomy for consistent triage and routing.
+See [.github/labels.md](./.github/labels.md) for the full label catalog
+and usage rules.
+
 ## Review Process
 
 - PRs are reviewed by maintainers.
