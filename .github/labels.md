@@ -38,7 +38,7 @@
 ### Area labels
 | Label | Color | Use when |
 | --- | --- | --- |
-| area:extension | #0E8A16 | General extension behavior or commands. |
+| area:core | #0E8A16 | Core extension behavior or commands. |
 | area:docs | #0E8A16 | README, docs, or wiki-related changes. |
 | area:tests | #0E8A16 | Unit/integration tests. |
 | area:ci | #0E8A16 | CI workflows or automation. |
