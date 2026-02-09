@@ -46,6 +46,8 @@
 | area:dependencies | #0E8A16 | Dependency updates. |
 
 ### Priority labels
+Normal priority items intentionally have no label to keep triage fast.
+Priority is not always determined by the reporter.
 | Label | Color | Use when |
 | --- | --- | --- |
 | priority:p0 | #B60205 | Data loss, security issue, or crash. |
