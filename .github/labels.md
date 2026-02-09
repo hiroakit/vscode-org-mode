@@ -66,6 +66,7 @@ Priority is not always determined by the reporter.
 ### Special labels (unprefixed)
 | Label | Color | Use when |
 | --- | --- | --- |
+| duplicate | #CFD3D7 | This issue or pull request already exists. |
 | good first issue | #7057FF | Suitable for first-time contributors. |
 | help wanted | #008672 | Maintainers want external help. |
 
