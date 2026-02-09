@@ -16,8 +16,8 @@
 ### Issues
 - Exactly one `type:` label.
 - Exactly one `area:` label.
-- Exactly one `priority:` label.
 - Exactly one `status:` label.
+- Add a `priority:` label only when it is higher or lower than normal.
 
 ### Pull requests
 - Exactly one `type:` label.
@@ -49,7 +49,7 @@
 | --- | --- | --- |
 | priority:p0 | #B60205 | Data loss, security issue, or crash. |
 | priority:p1 | #D93F0B | Major feature broken or severe regression. |
-| priority:p2 | #FBCA04 | Default priority for normal work. |
+| priority:p3 | #FEF2C0 | Nice-to-have or low urgency. |
 
 ### Status labels
 | Label | Color | Use when |
@@ -68,9 +68,10 @@
 
 ## Triage workflow
 1. New issue arrives with `status:needs-triage`.
-2. Add `type:`, `area:`, and `priority:`.
-3. Set `status:` to `ready`, `needs-info`, or `blocked`.
-4. Set `status:in-progress` when work starts.
+2. Add `type:` and `area:`.
+3. Add `priority:` only if it is p0, p1, or p3.
+4. Set `status:` to `ready`, `needs-info`, or `blocked`.
+5. Set `status:in-progress` when work starts.
 
 ## Label lifecycle
 - Keep the list minimal and stable.
