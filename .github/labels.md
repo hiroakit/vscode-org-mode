@@ -33,6 +33,7 @@
 | type:feature | #1D76DB | New user-visible behavior. |
 | type:docs | #0075CA | Documentation-only changes or requests. |
 | type:maintenance | #F9D0C4 | Refactors, cleanup, tooling, or chores. |
+| type:planning | #BFDADC | Iteration planning or roadmap work. |
 
 ### Area labels
 | Label | Color | Use when |
