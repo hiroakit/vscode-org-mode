@@ -1,4 +1,4 @@
-# GitHub Labels (Simple)
+# GitHub Labels
 
 ## Goals
 - Keep triage consistent and fast.
