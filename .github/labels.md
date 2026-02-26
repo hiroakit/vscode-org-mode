@@ -29,11 +29,14 @@
 ### Type labels
 | Label | Color | Use when |
 | --- | --- | --- |
-| type:bug | #D73A4A | Something is broken or regressed. |
-| type:feature | #1D76DB | New user-visible behavior. |
-| type:docs | #0075CA | Documentation-only changes or requests. |
-| type:maintenance | #F9D0C4 | Refactors, cleanup, tooling, or chores. |
-| type:planning | #BFDADC | Iteration planning or roadmap work. |
+| type:bug | #0075CA | Something is broken or regressed. |
+| type:feature | #0075CA | New or improved user-visible behavior. |
+| type:infra | #0075CA | Infrastructure and codebase maintenance (not user-visible). |
+| type:planning | #0075CA | Sprint or iteration planning; use with `area:docs` only. |
+
+#### Notes
+- `type:infra` covers: tooling, CI, workflows, repository governance (e.g. labels, templates), information infrastructure (e.g. knowledge base, wikis), and refactors or code cleanup with no user-visible behavior change.
+- For documentation-only changes, use `type:bug` (fixing errors), `type:feature` (new or improved user-facing docs), or `type:infra` (doc infrastructure); use `area:docs` for scope.
 
 ### Area labels
 | Label | Color | Use when |
@@ -45,32 +48,53 @@
 | area:release | #0E8A16 | Changelog or publishing. |
 | area:dependencies | #0E8A16 | Dependency updates. |
 
+#### Notes
+- Use `type:bug` when a dependency causes a defect, security issue, or regression; use `type:infra` for routine updates, lockfile changes, or policy work.
+- A PR labeled with `area:docs` only is treated as a documentation-only change.
+
 ### Priority labels
-Normal priority items intentionally have no label to keep triage fast.
-Priority is not always determined by the reporter.
 | Label | Color | Use when |
 | --- | --- | --- |
-| priority:p0 | #B60205 | Data loss, security issue, or crash. |
-| priority:p1 | #D93F0B | Major feature broken or severe regression. |
+| priority:p0 | #FEF2C0 | Data loss, security issue, or crash. |
+| priority:p1 | #FEF2C0 | Major feature broken or severe regression. |
 | priority:p3 | #FEF2C0 | Nice-to-have or low urgency. |
+
+#### Notes
+- Normal priority items intentionally have no label to keep triage fast.
+- Priority is not always determined by the reporter.
 
 ### Status labels
 | Label | Color | Use when |
 | --- | --- | --- |
 | status:needs-triage | #C5DEF5 | New issue awaiting initial triage. |
-| status:needs-info | #BFDADC | Reporter must provide more details. |
-| status:in-progress | #5319E7 | Actively being worked on. |
-| status:blocked | #B60205 | Blocked by external dependency or decision. |
-| status:ready | #0E8A16 | Ready to pick up or to implement. |
+| status:needs-info | #C5DEF5 | Reporter must provide more details. |
+| status:in-progress | #C5DEF5 | Actively being worked on. |
+| status:blocked | #C5DEF5 | Blocked by external dependency or decision. |
+| status:ready | #C5DEF5 | Ready to pick up or to implement. |
 
 ### Special labels (unprefixed)
 | Label | Color | Use when |
 | --- | --- | --- |
-| duplicate | #CFD3D7 | This issue or pull request already exists. |
+| duplicate | #7057FF | This issue or pull request already exists. |
 | good first issue | #7057FF | Suitable for first-time contributors. |
-| help wanted | #008672 | Maintainers want external help. |
+| help wanted | #7057FF | Maintainers want external help. |
+
+## Label examples for pull requests
+
+| Case | type | area |
+| --- | --- | --- |
+| Adding a new feature to the VSCode extension | type:feature | area:core, area:tests |
+| Improving the VSCode extension | type:feature | area:core, area:tests |
+| Feature or improvement with documentation updates | type:feature | area:core, area:docs |
+| Fixing a bug in the VSCode extension (code and tests) | type:bug | area:core, area:tests |
+| Fixing a bug and updating docs in the same PR | type:bug | area:core, area:docs (and area:tests if applicable) |
+| Fixing an error or gap in documentation only | type:bug | area:docs |
+| PR only expands test code | type:infra | area:tests |
+| Repository operations or governance (e.g. labels, triage, templates) | type:infra | area:docs (or area:ci etc. by scope) |
 
 ## Triage workflow
+This workflow applies to issues only. Pull requests are expected to have `type:` and `area:` set at creation time; `status:` is optional on pull requests.
+
 1. New issue arrives with `status:needs-triage`.
 2. Add `type:` and `area:`.
 3. Add `priority:` only if it is p0, p1, or p3.
