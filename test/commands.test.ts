@@ -11,6 +11,7 @@ type TestEditorAction = (editor: vscode.TextEditor, document: vscode.TextDocumen
 async function inTextEditor(options: TestEditorOptions, action: TestEditorAction) {
     const d = await vscode.workspace.openTextDocument(options);
     await vscode.window.showTextDocument(d);
+    await vscode.extensions.getExtension('vscode-org-mode.org-mode')?.activate();
     await action(vscode.window.activeTextEditor!, d);
 }
 

@@ -35,13 +35,25 @@ export default function getCursorContext(_textEditor: TextEditor, _edit: TextEdi
     }
 
     // Match for TODO (or absence)
-    const todoKeywords = Util.getKeywords().join("|");
-    // const todoWords = "TODO|DONE";
-    const todoHeaderRegexp = new RegExp(`^(\\s*\\*+\\s+)(${todoKeywords})(?:\\b|\\[|$)`);
-    match = todoHeaderRegexp.exec(curLine);
+    const keywords = Util.getKeywords();
+    const todoKeywords = keywords.filter((k) => k !== "").join("|");
+
+    // For keyword matching, avoid `\b` because JS word boundaries are ASCII-based and
+    // don't work for non-ASCII keywords (e.g. CJK). Instead require a delimiter that
+    // we expect after a TODO keyword in a heading.
+    if (todoKeywords) {
+        const todoHeaderRegexp = new RegExp(`^(\\s*\\*+\\s+)(${todoKeywords})(?=\\s|\\[|$)`);
+        match = todoHeaderRegexp.exec(curLine);
+        if (match) {
+            return getTodoContext(match, cursorPos);
+        }
+    }
+
+    // If this is a heading without a keyword, treat it as the empty TODO keyword context.
+    const headerPrefixRegexp = /^(\s*\*+\s+)/;
+    match = headerPrefixRegexp.exec(curLine);
     if (match) {
-        // We've found our match
-        return getTodoContext(match, cursorPos);
+        return getEmptyTodoContext(match, cursorPos);
     }
 
     return undefined;
@@ -79,6 +91,21 @@ function getTodoContext(match: RegExpExecArray, cursorPos: Position): IContextDa
 
     return {
         data: todoWord,
+        dataLabel: TODO,
+        line,
+        range
+    };
+}
+
+function getEmptyTodoContext(match: RegExpExecArray, cursorPos: Position): IContextData {
+    const line = cursorPos.line;
+
+    const start = match.index + match[1].length;
+    const pos = new Position(line, start);
+    const range = new Range(pos, pos);
+
+    return {
+        data: "",
         dataLabel: TODO,
         line,
         range
