@@ -8,10 +8,13 @@ title: "[Plan] "
 
 Describe what will be true when this issue is **Done**.
 
+- Dates are **required**:
+  - February 28, 2026: Endgame begins
+  - March 8, 2026: Endgame done
+
 - Target outcome from a user/developer perspective (expected behavior, UX, performance, compatibility, etc.)
 - Acceptance criteria (what counts as done, how/where to validate)
 - Non-goals (out of scope)
-- Dates/milestones if relevant (optional)
 
 ## Plan Items
 
