@@ -16,6 +16,12 @@
   If a change exceeds that size, split it into smaller, reviewable PRs.
   Rationale: https://smartbear.com/resources/case-studies/cisco-systems-collaborator/
 
+## Issue triage and labels
+
+We maintain a label taxonomy for consistent triage and routing.
+See [.github/labels.md](./.github/labels.md) for the full label catalog
+and usage rules.
+
 ## Review Process
 
 - PRs are reviewed by maintainers.
@@ -53,3 +59,5 @@ To create a VSIX package or build the extension locally, see [BUILD.md](BUILD.md
 - Optionally, prefix feature branch names with `feature/`.
 - Bugfix branches must use the `bugfix/` prefix (e.g. `bugfix/short-description`).
 - Infra branches must use the `infra/` prefix (e.g. `infra/short-description`).
+  - Use `infra/` for repo or process work such as docs, CI, tooling,
+    templates, release automation, or dependency maintenance.
