@@ -1,0 +1,4 @@
+{
+  "baseImage": "node:24-bookworm",
+  "install": "npm ci"
+}
