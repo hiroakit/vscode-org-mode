@@ -1,5 +1,4 @@
 {
-  "name": "vscode-org-mode",
-  "install": "npm ci",
-  "snapshot": "POPULATED_FROM_SETTINGS"
+  "baseImage": "node:24-bookworm",
+  "install": "npm ci"
 }
