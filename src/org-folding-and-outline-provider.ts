@@ -3,6 +3,7 @@ import {
     DocumentSymbolProvider,
     FoldingRange,
     FoldingRangeProvider,
+    Location,
     Position,
     ProviderResult,
     Range,
@@ -27,14 +28,12 @@ export class OrgFoldingAndOutlineProvider implements FoldingRangeProvider, Docum
         this.documentStateRegistry = new WeakMap();
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    public provideFoldingRanges(document: TextDocument, token: CancellationToken): ProviderResult<FoldingRange[]> {
+    public provideFoldingRanges(document: TextDocument, _token: CancellationToken): ProviderResult<FoldingRange[]> {
         const state = this.getOrCreateDocumentState(document);
         return state.getRanges(document);
     }
 
-    // eslint-disable-next-line @typescript-eslint/no-unused-vars
-    public provideDocumentSymbols(document: TextDocument, token: CancellationToken): ProviderResult<SymbolInformation[]> {
+    public provideDocumentSymbols(document: TextDocument, _token: CancellationToken): ProviderResult<SymbolInformation[]> {
         const state = this.getOrCreateDocumentState(document);
         return state.getSymbols(document);
     }
@@ -86,7 +85,7 @@ class OrgFoldingAndOutlineDocumentState {
                     inBlock = false;
                     if (stack.length > 0 && stack[stack.length - 1].type === ChunkType.BLOCK) {
                         const localTop = stack.pop();
-                        this.createSection(localTop, lineNumber);
+                        this.createSection(document, localTop, lineNumber);
                     }
                 }
             } else if (utils.isBlockStartLine(text)) {
@@ -99,7 +98,7 @@ class OrgFoldingAndOutlineDocumentState {
                 // close previous sections
                 while (stack.length > 0 && stack[stack.length - 1].level >= currentLevel) {
                     const localTop = stack.pop();
-                    this.createSection(localTop, lineNumber - 1);
+                    this.createSection(document, localTop, lineNumber - 1);
                 }
 
                 const title = utils.getHeaderTitle(text);
@@ -109,19 +108,21 @@ class OrgFoldingAndOutlineDocumentState {
 
         let top: IChunk;
         while ((top = stack.pop()) != null) {
-            this.createSection(top, count - 1);
+            this.createSection(document, top, count - 1);
         }
     }
 
-    private createSection(chunk: IChunk, endLine) {
+    private createSection(document: TextDocument, chunk: IChunk, endLine: number) {
+        const range = new Range(
+            new Position(chunk.startLine, 0),
+            new Position(endLine, 0)
+        );
         this.ranges.push(new FoldingRange(chunk.startLine, endLine));
         this.symbols.push(new SymbolInformation(
             chunk.title,
             chunk.type.valueOf(),
-            new Range(
-                new Position(chunk.startLine, 0),
-                new Position(endLine, 0)
-            )
+            "",
+            new Location(document.uri, range)
         ));
     }
 
@@ -130,6 +131,6 @@ class OrgFoldingAndOutlineDocumentState {
         if(titleStartAt === 0) {
             titleStartAt = line.indexOf(':') + 2;
         }
-        return line.substr(titleStartAt);
+        return line.substring(titleStartAt);
     }
 }

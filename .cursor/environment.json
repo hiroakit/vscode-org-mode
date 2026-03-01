@@ -1,0 +1,5 @@
+{
+  "name": "vscode-org-mode",
+  "install": "npm ci",
+  "snapshot": "POPULATED_FROM_SETTINGS"
+}
