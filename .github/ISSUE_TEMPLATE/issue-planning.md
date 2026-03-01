@@ -24,12 +24,12 @@ Legend (optional):
 
 | Symbol | Meaning |
 | ------ | ------- |
-| 🏃 | In progress |
-| ✋ | Blocked |
-| 💪 | Stretch goal for this iteration |
-| 🔬 | Needs investigation to reduce uncertainty |
-| ⏳ | Larger than one iteration |
+| :runner: | In progress |
+| :hand: | Blocked |
+| :muscle: | Stretch goal for this iteration |
+| :microscope: | Needs investigation to reduce uncertainty |
+| :hourglass_flowing_sand: | Larger than one iteration |
 
-- [ ] 🏃 Item 1 (link issue/PR if any)
+- [ ] :runner: Item 1 (link issue/PR if any)
 - [ ] Item 2
-- [ ] 💪 Item 3
+- [ ] :muscle: Item 3
