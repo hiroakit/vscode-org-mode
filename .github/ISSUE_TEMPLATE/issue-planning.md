@@ -1,43 +1,35 @@
 ---
 name: "Planning: Endgame + Plan Items"
-about: "計画Issue用テンプレ（Endgame / Plan Items）"
+about: "Issue template for planning (Endgame / Plan Items)"
 title: "[Plan] "
 ---
 
 ## Endgame
 
-このIssueが **Done** になったときに「何がどうなっているか」を書く。
+Describe what will be true when this issue is **Done**.
 
-- ユーザー/開発者視点での到達状態（例: 期待する挙動、UX、性能、互換性）
-- 受け入れ条件（例: 何ができればOKか、どの環境で確認するか）
-- Non-goals（やらないこと / スコープ外）
-- 期日がある場合は日程（任意）
+- Target outcome from a user/developer perspective (expected behavior, UX, performance, compatibility, etc.)
+- Acceptance criteria (what counts as done, how/where to validate)
+- Non-goals (out of scope)
+- Dates/milestones if relevant (optional)
 
 ## Plan Items
 
-上位の作業項目をチェックボックスで列挙する。
+List the top-level work items as checkboxes.
 
 > [!IMPORTANT]
-> この欄は「やることの一覧」と「進捗の可視化」が主目的。説明が長い場合は、各項目を別Issue/PRに切り出してリンクする。
+> The goal is to make the work and progress visible. If an item needs more detail, link to a dedicated issue/PR.
 
-Legend（任意）:
+Legend (optional):
 
-| 記号 | 意味 |
-| ---- | ---- |
-| 🏃 | 進行中 |
-| ✋ | ブロックされているタスク |
-| 💪 | 今イテレーションのストレッチゴール |
-| 🔬 | 不確実性を減らすため、さらに調査が必要 |
-| ⏳ | 1イテレーションを超える大きな作業 |
+| Symbol | Meaning |
+| ------ | ------- |
+| 🏃 | In progress |
+| ✋ | Blocked |
+| 💪 | Stretch goal for this iteration |
+| 🔬 | Needs investigation to reduce uncertainty |
+| ⏳ | Larger than one iteration |
 
 - [ ] 🏃 Item 1 (link issue/PR if any)
 - [ ] Item 2
 - [ ] 💪 Item 3
-
-<details>
-<summary>Sub-items (optional)</summary>
-
-- [ ] Sub-item A
-- [ ] Sub-item B
-
-</details>
