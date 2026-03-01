@@ -22,16 +22,17 @@ title: "[Plan] "
 
 Legend（任意）:
 
-| Mark | Meaning |
-| ---- | ------- |
-| :runner: | work in progress |
-| :hand: | blocked |
-| :muscle: | stretch goal |
-| :red_circle: | missing reference |
+| 記号 | 意味 |
+| ---- | ---- |
+| 🏃 | 進行中 |
+| ✋ | ブロックされているタスク |
+| 💪 | 今イテレーションのストレッチゴール |
+| 🔬 | 不確実性を減らすため、さらに調査が必要 |
+| ⏳ | 1イテレーションを超える大きな作業 |
 
-- [ ] :runner: Item 1 (link issue/PR if any)
+- [ ] 🏃 Item 1 (link issue/PR if any)
 - [ ] Item 2
-- [ ] :muscle: Item 3
+- [ ] 💪 Item 3
 
 <details>
 <summary>Sub-items (optional)</summary>
