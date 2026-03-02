@@ -30,7 +30,9 @@ export function getHeaderPrefix(line: string) {
  * @return the title name
  */
 export function getHeaderTitle(line: string): string {
-    return line.substr(line.indexOf(' ') + 1);
+    const rawTitle = line.substring(line.indexOf(' ') + 1);
+    const title = rawTitle.trim();
+    return title.length > 0 ? title : '(empty heading)';
 }
 
 export function getPrefix(line: string) {
