@@ -62,5 +62,86 @@ suite('Todo switching (unicode)', () => {
             })
         );
     });
+
+    test('Matches keyword before bracket with no space', async () => {
+        const steps = [
+            '* 待办[#A] Header',
+            '* 完成[#A] Header',
+            '* [#A] Header',
+        ];
+
+        await withTodoKeywords(['待办', '完成'], () =>
+            inTextEditor({ language: 'org', content: steps[0] }, async (_, document) => {
+                for (let i = 1; i < steps.length; ++i) {
+                    await vscode.commands.executeCommand('org.incrementContext');
+                    assert.equal(document.getText(), steps[i]);
+                }
+            })
+        );
+    });
+
+    test('Matches keyword at end-of-line', async () => {
+        const steps = [
+            '* 待办',
+            '* 完成',
+            '* ',
+        ];
+
+        await withTodoKeywords(['待办', '完成'], () =>
+            inTextEditor({ language: 'org', content: steps[0] }, async (_, document) => {
+                for (let i = 1; i < steps.length; ++i) {
+                    await vscode.commands.executeCommand('org.incrementContext');
+                    assert.equal(document.getText(), steps[i]);
+                }
+            })
+        );
+    });
+
+    test('Japanese keywords (3+) cycle and preserve empty state', async () => {
+        const steps = [
+            '* Header',
+            '* やる Header',
+            '* 完了 Header',
+            '* 保留 Header',
+            '* Header',
+        ];
+
+        await withTodoKeywords(['やる', '完了', '保留'], () =>
+            inTextEditor({ language: 'org', content: steps[0] }, async (_, document) => {
+                for (let i = 1; i < steps.length; ++i) {
+                    await vscode.commands.executeCommand('org.incrementContext');
+                    assert.equal(document.getText(), steps[i]);
+                }
+            })
+        );
+    });
+
+    test('Hangul keywords cycle in both directions', async () => {
+        const incSteps = [
+            '* Header',
+            '* 해야함 Header',
+            '* 완료 Header',
+            '* Header',
+        ];
+        const decSteps = [
+            '* Header',
+            '* 완료 Header',
+            '* 해야함 Header',
+            '* Header',
+        ];
+
+        await withTodoKeywords(['해야함', '완료'], () =>
+            inTextEditor({ language: 'org', content: incSteps[0] }, async (_, document) => {
+                for (let i = 1; i < incSteps.length; ++i) {
+                    await vscode.commands.executeCommand('org.incrementContext');
+                    assert.equal(document.getText(), incSteps[i]);
+                }
+                for (let i = 1; i < decSteps.length; ++i) {
+                    await vscode.commands.executeCommand('org.decrementContext');
+                    assert.equal(document.getText(), decSteps[i]);
+                }
+            })
+        );
+    });
 });
 

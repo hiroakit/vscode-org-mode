@@ -23,11 +23,15 @@ function modifyContext(textEditor: vscode.TextEditor, edit: vscode.TextEditorEdi
         } case TODO: {
             const newTodoString = nextTodo(ctx.data, action);
             if (newTodoString === "") {
-                // Must remove extra space
+                // Remove a single trailing space after the TODO keyword (if present).
+                // Do not remove other delimiters like `[` that may follow the keyword.
                 const oldEnd = ctx.range.end;
-                const newEnd = oldEnd.with({ character: oldEnd.character + 1 });
-                const oldRange = ctx.range;
-                ctx.range = oldRange.with({ end: newEnd });
+                const lineText = textEditor.document.lineAt(ctx.line).text;
+                if (oldEnd.character < lineText.length && lineText[oldEnd.character] === " ") {
+                    const newEnd = oldEnd.with({ character: oldEnd.character + 1 });
+                    const oldRange = ctx.range;
+                    ctx.range = oldRange.with({ end: newEnd });
+                }
             }
             edit.replace(ctx.range, newTodoString);
             break;
